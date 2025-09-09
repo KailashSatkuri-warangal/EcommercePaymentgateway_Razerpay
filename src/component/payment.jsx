@@ -38,7 +38,7 @@ const Payment = () => {
         const wbout = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
         saveAs(new Blob([wbout], { type: "application/octet-stream" }), "transactions.xlsx");
 
-        alert("Payment Success! Card info saved for testing.");
+        alert("Payment Successful! Transaction data saved.");
       },
     };
 
