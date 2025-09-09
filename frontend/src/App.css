@@ -1,0 +1,56 @@
+/* Tailwind base, components, utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc; /* Tailwind gray-50 equivalent */
+  color: #1f2937; /* Tailwind gray-800 */
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Container Utility ===== */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  @apply bg-yellow-500 text-white font-semibold py-2 px-4 rounded shadow hover:bg-yellow-600 transition;
+}
+
+.btn-secondary {
+  @apply bg-gray-800 text-white font-semibold py-2 px-4 rounded shadow hover:bg-gray-900 transition;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: #111827; /* Tailwind gray-900 */
+}
+
+/* ===== Cards ===== */
+.card {
+  @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition transform hover:-translate-y-2;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  @apply bg-gray-900 text-white shadow-md;
+}
+
+.navbar a {
+  @apply hover:text-yellow-400 transition;
+}
+
+/* ===== Footer ===== */
+.footer {
+  @apply bg-gray-900 text-gray-300 py-6 text-center;
+}
