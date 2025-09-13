@@ -1,4 +1,4 @@
-import ServiceCard from "../component/servicecard";
+import ServiceCard from "../component/ServiceCard";
 
 const Service = () => {
   const services = [
@@ -8,8 +8,8 @@ const Service = () => {
   ];
 
   return (
-    <div>
-      <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Services</h2>
+    <div className="max-w-5xl mx-auto py-16 px-6">
+      <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Our Services</h2>
       <div className="grid md:grid-cols-3 gap-8">
         {services.map((s, i) => (
           <ServiceCard key={i} icon={s.icon} title={s.title} desc={s.desc} />
