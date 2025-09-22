@@ -1,74 +1,134 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application built with **Express.js** for backend and **React (Vite)** for frontend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Project Structure
 
-## Expanding the ESLint configuration
+```
+.vite/deps          # Vite dependencies
+express             # Express backend setup
+models              # Database models
+routes              # API routes
+.env                # Environment variables
+package-lock.json   # Dependency lockfile
+package.json        # Backend dependencies
+server.js           # Backend entry point
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+frontend/           # React frontend project
+  public/           # Public assets
+  src/              # Source code
+    assets/         # Static assets (e.g., react.svg)
+    component/      # Reusable components
+      footer.jsx
+      navbar.jsx
+      servicecard.jsx
+    css/            # Styling
+      App.css
+      index.css
+    pages/          # Application pages
+      about.jsx
+      home.jsx
+      payment.jsx
+      service.jsx
+    App.jsx          # Main App component
+    index.js         # React entry point
+    main.jsx
+    vite-env.d.ts
+  .env               # Frontend environment variables
+  .gitignore
+  README.md
+  eslint.config.js   # ESLint configuration
+  index.html         # Base HTML
+  package-lock.json
+  package.json       # Frontend dependencies
+  tsconfig.app.json
+  tsconfig.json
+  tsconfig.node.json
+  vite.config.ts     # Vite configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Features
+- **Backend:** Express.js server with routes & models
+- **Frontend:** React with Vite, modular components
+- **Styling:** Custom CSS
+- **Pages:** Home, About, Services, Payment
+- **Reusable Components:** Navbar, Footer, Service Card
+- **Environment Variables:** Secure configuration using `.env`
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone <repo-url>
+cd <repo-folder>
 ```
-=======
-# EcommercePaymentgateway_Razerpay
-Mernstack Devlopmwnt
->>>>>>> 87ae65e1d391ae33a33c612a2e46231887ea62cc
+
+### 2. Install backend dependencies
+```bash
+cd backend
+npm install
+```
+
+### 3. Install frontend dependencies
+```bash
+cd frontend
+npm install
+```
+
+### 4. Run backend
+```bash
+cd backend
+npm start
+```
+
+### 5. Run frontend
+```bash
+cd frontend
+npm run dev
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create `.env` files in both **backend** and **frontend** with required variables.
+
+Example:
+```env
+PORT=5000
+MONGO_URI=your_mongo_connection_string
+VITE_API_URL=http://localhost:5000/api
+```
+
+---
+
+## 📦 Scripts
+
+### Backend
+```bash
+npm start       # Start backend server
+```
+
+### Frontend
+```bash
+npm run dev     # Start development server
+npm run build   # Build for production
+npm run preview # Preview production build
+```
+
+---
+
+## 🌐 Live Demo
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://kailashsatkuri-warangal.github.io/EcommercePaymentgateway_Razerpay/)
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
